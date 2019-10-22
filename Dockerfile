@@ -1,8 +1,10 @@
-FROM cassandra:3.11
+FROM scylladb/scylla:1.7.5
 MAINTAINER Saïd Bouras <said.bouras@gmail.com>
 
 # Workaround for https://github.com/docker/docker/issues/6345
 RUN ln -s -f /bin/true /usr/bin/chfn
+
+ENV SCYLLA_CONFIG /etc/scylla
 
 # Disable vnodes and gossip to bootstrap faster 
 COPY scripts/setup-config.sh /setup-config.sh
