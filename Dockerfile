@@ -1,5 +1,5 @@
-FROM scylladb/scylla:1.7.5
-MAINTAINER Saïd Bouras <said.bouras@gmail.com>
+FROM scylladb/scylla:3.0.8
+MAINTAINER Serge Kireev <serge.kireev.fr@gmail.com>
 
 # Workaround for https://github.com/docker/docker/issues/6345
 RUN ln -s -f /bin/true /usr/bin/chfn
