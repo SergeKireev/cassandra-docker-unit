@@ -10,6 +10,8 @@ ENV SCYLLA_CONFIG /etc/scylla
 COPY scripts/setup-config.sh /setup-config.sh
 RUN sh setup-config.sh
 
+ADD data /var/lib/scylla/
+
 # 7000 : intra-node communication
 # 7001 : TLS inrra-node communication
 # 7199 : JMX
